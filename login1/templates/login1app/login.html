@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Title hai</title>
+</head>
+{% extends "login1app/basic.html" %}
+{% block body_block %}
+<h1>login form</h1>
+<form action="post" action="{% url 'login1app:user_login' %}">
+  {% csrf_token %}
+  <label for="username">userr</label>
+  <input type="text" name="user" placeholder="ent name">
+
+  <label for="password">passwword</label>
+  <input type="password" name="pass">
+
+  <input type="submit" name="sub" value="submittt">
+</form>
+
+
+
+{% endblock %}
